@@ -92,7 +92,17 @@ class ModelInferenceEngine:
             )
 
         # Load tokenizer
-        tokenizer = AutoTokenizer.from_pretrained(model_path)
+        # Try to load from model_path, fallback to base model if needed
+        try:
+            tokenizer = AutoTokenizer.from_pretrained(model_path)
+        except Exception as e:
+            console.print(f"[yellow]Warning: Could not load tokenizer from {model_path}, using base model[/yellow]")
+            # For LoRA models, fallback to base model tokenizer
+            if adapter_config_path.exists():
+                tokenizer = AutoTokenizer.from_pretrained(base_model_name)
+            else:
+                raise e
+
         if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
             tokenizer.pad_token_id = tokenizer.eos_token_id

@@ -36,7 +36,7 @@ from transformers import (
     DataCollatorForLanguageModeling,
     EarlyStoppingCallback,
 )
-from peft import PeftModel, PeftConfig
+from peft import PeftModel
 import mlflow
 from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn
