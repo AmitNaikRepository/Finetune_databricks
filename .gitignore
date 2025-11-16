@@ -205,3 +205,64 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ML and LLM Specific
+# Model checkpoints and weights
+models/checkpoints/*.bin
+models/checkpoints/*.safetensors
+models/checkpoints/*.pt
+models/checkpoints/*.pth
+models/checkpoints/*.ckpt
+models/checkpoints/*/
+
+# Keep README files in model directories
+!models/checkpoints/README.md
+
+# Experiment tracking
+mlruns/
+wandb/
+monitoring/*.db
+monitoring/*.db-journal
+monitoring/mlflow.db
+
+# Training data (keep sample data)
+data/raw/*.parquet
+data/raw/*.csv
+data/raw/*.json
+data/processed/*.parquet
+data/processed/*.csv
+!data/raw/sample_*.json
+!data/processed/sample_*.json
+
+# Hugging Face cache
+.cache/
+transformers_cache/
+huggingface/
+
+# Databricks config (sensitive)
+.databricks/
+.databrickscfg
+
+# Large files
+*.tar.gz
+*.zip
+*.h5
+*.hdf5
+
+# API keys and secrets
+secrets.yaml
+credentials.json
+
+# Logs
+logs/
+*.log
+training_logs/
+
+# Temporary files
+tmp/
+temp/
+.DS_Store
+
+# VSCode workspace
+.vscode/settings.json
+.vscode/launch.json

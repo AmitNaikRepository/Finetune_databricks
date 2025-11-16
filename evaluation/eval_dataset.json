@@ -1,0 +1,72 @@
+[
+  {
+    "id": "eval_001",
+    "instruction": "How do I reset my password?",
+    "golden_response": "To reset your password: 1) Go to the login page, 2) Click 'Forgot Password', 3) Enter your email address, 4) Check your inbox for a reset link, 5) Follow the link and create a new password.",
+    "category": "password_reset",
+    "difficulty": "easy"
+  },
+  {
+    "id": "eval_002",
+    "instruction": "I can't access my account",
+    "golden_response": "If you're having trouble accessing your account: 1) Ensure you're using the correct email address, 2) Try resetting your password, 3) Clear your browser cache and cookies, 4) If the account is locked, wait 30 minutes and try again.",
+    "category": "account_access",
+    "difficulty": "medium"
+  },
+  {
+    "id": "eval_003",
+    "instruction": "Where is my order?",
+    "golden_response": "You can track your order by: 1) Logging into your account, 2) Going to 'Order History', 3) Clicking on the specific order, 4) Viewing real-time tracking information. Orders typically arrive within 3-5 business days.",
+    "category": "order_tracking",
+    "difficulty": "easy"
+  },
+  {
+    "id": "eval_004",
+    "instruction": "How do I get a refund?",
+    "golden_response": "Our refund process: 1) Items can be returned within 30 days of purchase, 2) Go to 'My Orders' and select 'Return Item', 3) Print the prepaid return label, 4) Ship the item back, 5) Refunds are processed within 5-7 business days after we receive the return.",
+    "category": "refund",
+    "difficulty": "medium"
+  },
+  {
+    "id": "eval_005",
+    "instruction": "Why was I charged twice?",
+    "golden_response": "To review your billing: 1) Log into your account, 2) Navigate to 'Billing & Payments', 3) View all transactions. If you see duplicate charges, they may be pending authorizations that will drop off in 3-5 business days. For confirmed duplicates, contact our billing department.",
+    "category": "billing",
+    "difficulty": "medium"
+  },
+  {
+    "id": "eval_006",
+    "instruction": "Do you ship internationally?",
+    "golden_response": "We offer multiple shipping options: 1) Standard shipping (3-5 business days), 2) Express shipping (2-3 business days), 3) Overnight shipping (1 business day). International shipping is available to select countries with rates calculated at checkout.",
+    "category": "shipping",
+    "difficulty": "easy"
+  },
+  {
+    "id": "eval_007",
+    "instruction": "The app keeps crashing",
+    "golden_response": "For technical issues, try these steps: 1) Restart the app, 2) Clear cache and data, 3) Ensure you're using the latest version, 4) Try uninstalling and reinstalling, 5) Check your internet connection. If the problem persists, contact technical support with your device information.",
+    "category": "technical_support",
+    "difficulty": "hard"
+  },
+  {
+    "id": "eval_008",
+    "instruction": "How do I change my email address?",
+    "golden_response": "To change your email address: 1) Log into your account, 2) Go to 'Account Settings', 3) Click 'Edit' next to your email, 4) Enter your new email address, 5) Verify the new email by clicking the link we send you. For security, you'll need to enter your current password.",
+    "category": "account_management",
+    "difficulty": "easy"
+  },
+  {
+    "id": "eval_009",
+    "instruction": "Can I cancel my subscription?",
+    "golden_response": "To cancel your subscription: 1) Log into your account, 2) Navigate to 'Subscriptions', 3) Select the subscription you want to cancel, 4) Click 'Cancel Subscription', 5) Confirm cancellation. You'll retain access until the end of your current billing period.",
+    "category": "subscription",
+    "difficulty": "medium"
+  },
+  {
+    "id": "eval_010",
+    "instruction": "What payment methods do you accept?",
+    "golden_response": "We accept: 1) Credit cards (Visa, Mastercard, American Express, Discover), 2) Debit cards, 3) PayPal, 4) Apple Pay, 5) Google Pay. All payments are processed securely through our encrypted payment gateway.",
+    "category": "payment",
+    "difficulty": "easy"
+  }
+]
