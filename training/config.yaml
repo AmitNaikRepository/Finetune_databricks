@@ -1,0 +1,123 @@
+# Enterprise LLM Fine-Tuning Configuration
+# This config demonstrates production ML training practices
+
+# Model Configuration
+model:
+  base_model: "distilgpt2"  # Small model for CPU training (82M parameters)
+  # For production with GPU: "gpt2-medium", "gpt2-large", or custom models
+  model_max_length: 512
+  trust_remote_code: false
+
+# LoRA Configuration (Parameter-Efficient Fine-Tuning)
+lora:
+  # LoRA allows fine-tuning with ~0.1% of original parameters
+  rank: 8                    # Low-rank dimension (higher = more capacity, more memory)
+  alpha: 16                  # Scaling factor (typically 2x rank)
+  dropout: 0.1               # Dropout for LoRA layers
+  target_modules:            # Which attention layers to apply LoRA
+    - "c_attn"               # For GPT-2 architecture
+    - "c_proj"
+  bias: "none"               # Whether to train bias terms
+  task_type: "CAUSAL_LM"     # Causal language modeling
+
+# Training Hyperparameters
+training:
+  # Batch sizes (adjust based on available memory)
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 8
+  gradient_accumulation_steps: 4  # Effective batch size = 4 * 4 = 16
+
+  # Learning rate schedule
+  learning_rate: 2.0e-4            # Higher LR for LoRA than full fine-tuning
+  lr_scheduler_type: "cosine"      # cosine, linear, constant
+  warmup_steps: 100                # Gradual LR increase
+  warmup_ratio: 0.03
+
+  # Training duration
+  num_train_epochs: 3
+  max_steps: -1                    # -1 means use num_train_epochs
+
+  # Optimization
+  optim: "adamw_torch"             # AdamW optimizer
+  weight_decay: 0.01               # L2 regularization
+  max_grad_norm: 1.0               # Gradient clipping
+
+  # Precision (for GPU training)
+  fp16: false                      # Set true for GPU
+  bf16: false                      # Set true for newer GPUs
+
+  # Checkpointing
+  save_strategy: "steps"           # "steps", "epoch", or "no"
+  save_steps: 500
+  save_total_limit: 3              # Keep only 3 best checkpoints
+
+  # Evaluation
+  evaluation_strategy: "steps"
+  eval_steps: 250
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+  greater_is_better: false
+
+  # Logging
+  logging_steps: 50
+  logging_first_step: true
+  report_to: ["mlflow"]            # Options: "mlflow", "wandb", "tensorboard", "none"
+
+  # Reproducibility
+  seed: 42
+  data_seed: 42
+
+  # Performance
+  dataloader_num_workers: 4
+  dataloader_pin_memory: true
+  gradient_checkpointing: false    # Set true to save memory on GPU
+
+# Data Configuration
+data:
+  dataset_name: "customer_support_qa"
+  train_split: 0.9
+  validation_split: 0.1
+  max_samples: 1000               # Limit for portfolio demo
+  instruction_format: "alpaca"    # "alpaca", "chatml", or "plain"
+
+  # Data quality filters
+  min_response_length: 20
+  max_response_length: 1000
+  min_quality_score: 0.8
+
+# Experiment Tracking
+experiment:
+  project_name: "enterprise-sft-pipeline"
+  experiment_name: "customer-support-v1"
+  run_name: "distilgpt2-lora-r8"
+  tags:
+    - "customer-support"
+    - "lora"
+    - "distilgpt2"
+
+  # What to track
+  log_model: true
+  log_predictions: true           # Log sample predictions during training
+  log_gradients: false            # Can be expensive
+
+# Model Registry
+registry:
+  register_model: true
+  model_version_prefix: "v"
+  staging_status: "staging"       # "staging", "production", "archived"
+
+# Resource Configuration
+resources:
+  device: "cpu"                   # "cpu", "cuda", or "mps" (Mac)
+  max_memory_mb: 8192            # Maximum memory usage
+  num_workers: 4
+
+# Generation Configuration (for evaluation)
+generation:
+  max_new_tokens: 128
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  repetition_penalty: 1.1
+  do_sample: true
+  num_return_sequences: 1

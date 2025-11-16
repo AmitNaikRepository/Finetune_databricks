@@ -1,0 +1,68 @@
+# Core ML and Training
+torch>=2.0.0
+transformers>=4.35.0
+datasets>=2.14.0
+peft>=0.6.0
+accelerate>=0.24.0
+sentencepiece>=0.1.99
+tokenizers>=0.15.0
+
+# Evaluation Metrics
+evaluate>=0.4.0
+scikit-learn>=1.3.0
+scipy>=1.11.0
+nltk>=3.8.0
+rouge-score>=0.1.2
+
+# API Framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.4.0
+python-multipart>=0.0.6
+
+# Experiment Tracking (choose one or both)
+mlflow>=2.8.0
+wandb>=0.16.0
+
+# Data Processing
+pandas>=2.1.0
+numpy>=1.24.0
+pyarrow>=14.0.0
+
+# Database
+sqlalchemy>=2.0.0
+alembic>=1.12.0
+
+# Configuration Management
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# Utilities
+tqdm>=4.66.0
+rich>=13.6.0
+click>=8.1.0
+
+# Notebook Support
+jupyter>=1.0.0
+ipykernel>=6.26.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+plotly>=5.17.0
+
+# Testing (optional but professional)
+pytest>=7.4.0
+pytest-cov>=4.1.0
+httpx>=0.25.0
+
+# Code Quality (optional)
+black>=23.10.0
+flake8>=6.1.0
+isort>=5.12.0
+
+# Production Simulation Dependencies
+# These show what you'd use in real Databricks environment
+# databricks-sql-connector>=2.9.0  # Uncomment for real Databricks
+# delta-spark>=2.4.0  # Uncomment for Delta Lake
+
+# Performance Monitoring
+psutil>=5.9.0

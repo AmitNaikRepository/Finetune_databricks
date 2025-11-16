@@ -1,0 +1,86 @@
+[
+  {
+    "instruction": "How do I reset my password?",
+    "response": "To reset your password: 1) Go to the login page, 2) Click 'Forgot Password', 3) Enter your email address, 4) Check your inbox for a reset link, 5) Follow the link and create a new password. If you don't receive the email within 5 minutes, check your spam folder.",
+    "category": "password_reset",
+    "created_at": "2024-11-15T10:30:00",
+    "quality_score": 0.95
+  },
+  {
+    "instruction": "I forgot my password, what should I do?",
+    "response": "To reset your password: 1) Go to the login page, 2) Click 'Forgot Password', 3) Enter your email address, 4) Check your inbox for a reset link, 5) Follow the link and create a new password. If you don't receive the email within 5 minutes, check your spam folder.",
+    "category": "password_reset",
+    "created_at": "2024-11-15T11:15:00",
+    "quality_score": 0.92
+  },
+  {
+    "instruction": "Where is my order?",
+    "response": "You can track your order by: 1) Logging into your account, 2) Going to 'Order History', 3) Clicking on the specific order, 4) Viewing real-time tracking information. Orders typically arrive within 3-5 business days. You'll receive tracking updates via email.",
+    "category": "order_tracking",
+    "created_at": "2024-11-15T09:45:00",
+    "quality_score": 0.88
+  },
+  {
+    "instruction": "How can I track my package?",
+    "response": "You can track your order by: 1) Logging into your account, 2) Going to 'Order History', 3) Clicking on the specific order, 4) Viewing real-time tracking information. Orders typically arrive within 3-5 business days. You'll receive tracking updates via email.",
+    "category": "order_tracking",
+    "created_at": "2024-11-15T14:20:00",
+    "quality_score": 0.91
+  },
+  {
+    "instruction": "How do I get a refund?",
+    "response": "Our refund process: 1) Items can be returned within 30 days of purchase, 2) Go to 'My Orders' and select 'Return Item', 3) Print the prepaid return label, 4) Ship the item back, 5) Refunds are processed within 5-7 business days after we receive the return. Original shipping costs are non-refundable.",
+    "category": "refund",
+    "created_at": "2024-11-15T13:10:00",
+    "quality_score": 0.94
+  },
+  {
+    "instruction": "I want to return my order",
+    "response": "Our refund process: 1) Items can be returned within 30 days of purchase, 2) Go to 'My Orders' and select 'Return Item', 3) Print the prepaid return label, 4) Ship the item back, 5) Refunds are processed within 5-7 business days after we receive the return. Original shipping costs are non-refundable.",
+    "category": "refund",
+    "created_at": "2024-11-15T16:30:00",
+    "quality_score": 0.89
+  },
+  {
+    "instruction": "I can't log into my account",
+    "response": "If you're having trouble accessing your account: 1) Ensure you're using the correct email address, 2) Try resetting your password, 3) Clear your browser cache and cookies, 4) If the account is locked due to multiple failed login attempts, wait 30 minutes and try again. For persistent issues, contact our support team.",
+    "category": "account_access",
+    "created_at": "2024-11-15T08:55:00",
+    "quality_score": 0.93
+  },
+  {
+    "instruction": "My account is locked",
+    "response": "If you're having trouble accessing your account: 1) Ensure you're using the correct email address, 2) Try resetting your password, 3) Clear your browser cache and cookies, 4) If the account is locked due to multiple failed login attempts, wait 30 minutes and try again. For persistent issues, contact our support team.",
+    "category": "account_access",
+    "created_at": "2024-11-15T12:40:00",
+    "quality_score": 0.87
+  },
+  {
+    "instruction": "Why was I charged twice?",
+    "response": "To review your billing: 1) Log into your account, 2) Navigate to 'Billing & Payments', 3) View all transactions and invoices. If you see duplicate or unexpected charges, they may be pending authorizations that will drop off in 3-5 business days. For confirmed duplicate charges, contact our billing department for immediate assistance.",
+    "category": "billing",
+    "created_at": "2024-11-15T15:25:00",
+    "quality_score": 0.96
+  },
+  {
+    "instruction": "I see an unexpected charge on my card",
+    "response": "To review your billing: 1) Log into your account, 2) Navigate to 'Billing & Payments', 3) View all transactions and invoices. If you see duplicate or unexpected charges, they may be pending authorizations that will drop off in 3-5 business days. For confirmed duplicate charges, contact our billing department for immediate assistance.",
+    "category": "billing",
+    "created_at": "2024-11-15T10:05:00",
+    "quality_score": 0.90
+  },
+  {
+    "instruction": "Do you ship internationally?",
+    "response": "We offer multiple shipping options: 1) Standard shipping (3-5 business days) - Free for orders over $50, 2) Express shipping (2-3 business days) - $9.99, 3) Overnight shipping (1 business day) - $24.99. International shipping is available to select countries with rates calculated at checkout. Tracking information is provided for all shipments.",
+    "category": "shipping",
+    "created_at": "2024-11-15T11:50:00",
+    "quality_score": 0.85
+  },
+  {
+    "instruction": "How much does shipping cost?",
+    "response": "We offer multiple shipping options: 1) Standard shipping (3-5 business days) - Free for orders over $50, 2) Express shipping (2-3 business days) - $9.99, 3) Overnight shipping (1 business day) - $24.99. International shipping is available to select countries with rates calculated at checkout. Tracking information is provided for all shipments.",
+    "category": "shipping",
+    "created_at": "2024-11-15T09:20:00",
+    "quality_score": 0.88
+  }
+]
